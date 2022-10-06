@@ -62,12 +62,6 @@ public class Application {
     }
 
     private static void checkValidation(String userInput) {
-        try {
-            new Validation(DEFAULT_SIZE).validateInputData(userInput);
-        } catch (IllegalArgumentException illegalArgumentException) {
-            System.out.println(illegalArgumentException.getMessage());
-            System.out.println("게임을 다시 시작합니다.");
-            gameStart();
-        }
+        new Validation(DEFAULT_SIZE).validateInputData(userInput);
     }
 }
